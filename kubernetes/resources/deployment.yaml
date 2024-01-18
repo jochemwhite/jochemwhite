@@ -17,6 +17,6 @@ spec:
         image: ghcr.io/jochemwhite/jochemwhite:3508fc636fe6fa3de3195a86b79413fa8cfb6bef
         ports:
         - containerPort: 3000
-        envFrom:
-        - secretRef:
-            name: jochemwhite-frontend
+        # envFrom:
+        # - secretRef:
+        #     name: jochemwhite-frontend
