@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: jochemwhite-frontend
-        image: ghcr.io/jochemwhite/jochemwhite:3508fc636fe6fa3de3195a86b79413fa8cfb6bef
+        image: ghcr.io/jochemwhite/jochemwhite:e5561d911308cc9365d70a211bb6f6c4939ccf71
         ports:
         - containerPort: 3000
         # envFrom:
