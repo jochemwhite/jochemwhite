@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: jochemwhite-frontend-nl
+  annotations: { cert-manager.io/cluster-issuer: "letsencrypt-prod" }
+
+spec:
+  ingressClassName: traefik
+  tls:
+    - hosts:
+        - jochemwhite.nl
+      secretName: jochemwhite-frontend-secret
+  rules:
+    - host: jochemwhite.nl
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: jochemwhite-frontend-service
+                port:
+                  number: 80

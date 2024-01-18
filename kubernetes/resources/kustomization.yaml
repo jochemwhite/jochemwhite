@@ -1,0 +1,12 @@
+resources:
+  - deployment.yaml
+  - service.yaml
+  - ingress.yaml
+
+commonLabels:
+  app: jochemwhite-frontend
+
+commonAnnotations:
+  app: jochemwhite-frontend-annontations
+
+nameSuffix: -v1

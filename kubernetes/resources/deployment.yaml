@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jochemwhite-frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: jochemwhite-frontend
+  template:
+    metadata:
+      labels:
+        app: jochemwhite-frontend
+    spec:
+      containers:
+      - name: jochemwhite-frontend
+        image: ghcr.io/jochemwhite/jochemwhite-frontend:e06a819ea629f76529f4f8d2e70f0eeac548097e
+        ports:
+        - containerPort: 3000
+        envFrom:
+        - secretRef:
+            name: jochemwhite-frontend
